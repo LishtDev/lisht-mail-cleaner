@@ -1,0 +1,42 @@
+# --- Secrets et donnees locales : NE JAMAIS COMMITER ---
+.env
+credentials.json
+credentials/*.json
+token.json
+token/*.json
+client_secret*.json
+
+# Base locale, jetons, journaux, rapports
+data/*
+!data/.gitkeep
+logs/
+*.log
+reports/
+*.db
+*.sqlite
+*.sqlite3
+
+# --- Environnement virtuel ---
+.venv/
+venv/
+env/
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+build/
+dist/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# --- Editeurs / OS ---
+.vscode/
+.idea/
+*.swp
+.DS_Store

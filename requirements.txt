@@ -1,0 +1,28 @@
+# Lisht Mail Cleaner - dependances Python
+# Cible : Python 3.12 (Linux Mint 22.x / Ubuntu 24.04)
+# Toutes ces bibliotheques sont verifiees compatibles Python 3.12.
+
+# --- Interface graphique ---
+PySide6>=6.8,<6.13
+
+# --- API Gmail officielle + OAuth2 ---
+google-api-python-client>=2.150,<3
+google-auth>=2.30,<3
+google-auth-oauthlib>=1.2,<2
+google-auth-httplib2>=0.2,<1
+
+# --- IA locale (Ollama) ---
+ollama>=0.4,<1
+
+# --- Stockage securise du jeton OAuth dans le trousseau du bureau ---
+keyring>=25,<26
+
+# --- Planification hebdomadaire integree au processus ---
+APScheduler>=3.10,<4
+
+# --- Configuration locale (.env) ---
+python-dotenv>=1.0,<2
+
+# --- Tests ---
+pytest>=8,<10
+pytest-qt>=4.4,<5
