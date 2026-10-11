@@ -9,6 +9,16 @@ Si un paquet système manque (bibliothèques Qt), ils s'installent via le
 gestionnaire de paquets de Mint. Sur une installation Mint standard, les
 bibliothèques nécessaires sont déjà présentes.
 
+Dépendance système requise par Qt pour ouvrir la fenêtre (souvent absente
+sur Mint 22) :
+
+```bash
+sudo apt install libxcb-cursor0
+```
+
+Sans ce paquet, l'application échoue au lancement avec :
+`Could not load the Qt platform plugin "xcb"`.
+
 Vérifier Python :
 
 ```bash
@@ -89,6 +99,6 @@ deactivate
 | Problème | Solution |
 |---|---|
 | `python3: command not found` | `sudo apt install python3 python3-venv` |
-| Erreur Qt « could not load the Qt platform plugin xcb » | Installer `libxcb-*` via apt |
+| Erreur Qt « could not load the Qt platform plugin xcb » | `sudo apt install libxcb-cursor0` |
 | `pip install` échoue (externally-managed) | Vérifier que le venv est bien activé |
 | Base SQLite inaccessible | Vérifier les droits sur le dossier `data/` |
